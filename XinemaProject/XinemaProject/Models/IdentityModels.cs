@@ -29,5 +29,7 @@ namespace XinemaProject.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<XinemaProject.Models.Showtimes> Showtimes { get; set; }
     }
 }
