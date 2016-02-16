@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XinemaProject", "XinemaProject\XinemaProject.csproj", "{2350C0FA-E529-47E9-8E50-D500A74446BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{F36E35E2-261A-4FDB-8D49-0BB20DAA191E}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureVMPublishModule.psm1 = PublishScripts\AzureVMPublishModule.psm1
+		PublishScripts\Publish-WebApplicationVM.ps1 = PublishScripts\Publish-WebApplicationVM.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{1CD80DDB-A89D-4F44-AACE-964C53068C82}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\XinemaProject-WAWS-dev.json = PublishScripts\Configurations\XinemaProject-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2350C0FA-E529-47E9-8E50-D500A74446BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2350C0FA-E529-47E9-8E50-D500A74446BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2350C0FA-E529-47E9-8E50-D500A74446BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2350C0FA-E529-47E9-8E50-D500A74446BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1CD80DDB-A89D-4F44-AACE-964C53068C82} = {F36E35E2-261A-4FDB-8D49-0BB20DAA191E}
+	EndGlobalSection
+EndGlobal
