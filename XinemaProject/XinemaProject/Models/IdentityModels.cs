@@ -31,5 +31,7 @@ namespace XinemaProject.Models
         }
 
         public System.Data.Entity.DbSet<XinemaProject.Models.Showtimes> Showtimes { get; set; }
+
+        public System.Data.Entity.DbSet<XinemaProject.Models.Movies> Movies { get; set; }
     }
 }
