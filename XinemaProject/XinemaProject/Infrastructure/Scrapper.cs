@@ -40,16 +40,13 @@ namespace Infrastructure.Scrapper
                 }
                 catch (InvalidOperationException e)
                 {
-                    Console.WriteLine(e.Source);
+                    //Console.WriteLine(e.Source);
                 }
 
             }
 
-            foreach (var cinema in allCinemas)
-            {
-                Console.WriteLine(cinema.CinemaName);
-            }
-
+            //close driver
+            driver.Dispose();
         }
 
         private List<Cinema> scrapOnePageCinema(IWebDriver driver)
