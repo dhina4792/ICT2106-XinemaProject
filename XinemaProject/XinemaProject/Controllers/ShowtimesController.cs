@@ -17,7 +17,7 @@ namespace XinemaProject.Controllers
         // GET: Showtimes
         public ActionResult Index()
         {
-            return View(db.Showtimes.ToList());
+            return View();
         }
 
         // GET: Showtimes/Details/5

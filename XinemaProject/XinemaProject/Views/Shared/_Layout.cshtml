@@ -29,8 +29,8 @@
                 </div>
                 <div class="menu">
                     <ul class="megamenu skyblue">
-                        <li class="active grid"><a href="~/Views/Home/Index.cshtml">Home</a></li>
-                        <li><a class="color6" href="~/Views/Showtimes/Showtimes.cshtml">Showtimes</a></li>
+                        <li class="active grid">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Showtimes","Index","Showtimes")</li>
                         <li><a class="color7" href="#">Cinemas  </a></li>
                     </ul>
                 </div>
@@ -41,67 +41,11 @@
                     <input type="submit" value="Subscribe" id="submit" name="submit">
                     <div id="response"> </div>
                 </div>
-                <div class="tag-list">
-                    <ul class="icon1 sub-icon1 profile_img">
-                        <li>
-                            <a class="active-icon c1" href="#"> </a>
-                            <ul class="sub-icon1 list">
-                                <li><h3>sed diam nonummy</h3><a href=""></a></li>
-                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="icon1 sub-icon1 profile_img">
-                        <li>
-                            <a class="active-icon c2" href="#"> </a>
-                            <ul class="sub-icon1 list">
-                                <li><h3>No Products</h3><a href=""></a></li>
-                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
-                </div>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <!-- start slider -->
-    <div id="fwslider">
-        <div class="slider_container">
-            <div class="slide">
-                <!-- Slide image -->
-                <img src="~/images/banner.jpg" alt="" />
-                <!-- /Slide image -->
-                <!-- Texts container -->
-                <div class="slide_content">
-                    <div class="slide_content_wrap">
-                        <!-- Text title -->
-                        <h4 class="title">Aluminium Club</h4>
-                        <!-- /Text title -->
-                        <!-- Text description -->
-                        <p class="description">Experiance ray ban</p>
-                        <!-- /Text description -->
-                    </div>
-                </div>
-                <!-- /Texts container -->
-            </div>
-            <!-- /Duplicate to create more slides -->
-            <div class="slide">
-                <img src="~/images/banner1.jpg" alt="" />
-                <div class="slide_content">
-                    <div class="slide_content_wrap">
-                        <h4 class="title">consectetuer adipiscing </h4>
-                        <p class="description">diam nonummy nibh euismod</p>
-                    </div>
-                </div>
-            </div>
-            <!--/slide -->
-        </div>
-        <div class="timers"></div>
-        <div class="slidePrev"><span></span></div>
-        <div class="slideNext"><span></span></div>
-    </div>
+
     <!--/slider -->
     <div class="container body-content">
         @RenderBody()
