@@ -185,9 +185,14 @@
     <Compile Include="App_Start\JobScheduler.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\CinemasController.cs" />
-    <Compile Include="Controllers\DataJob.cs" />
+    <Compile Include="App_Start\DataScrapperJob.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ShowtimesController.cs" />
+    <Compile Include="DAL\CinemaGateway.cs" />
+    <Compile Include="DAL\ICinemaGateway.cs" />
+    <Compile Include="DAL\XinemaProjectContext.cs" />
+    <Compile Include="DAL\DataGateway.cs" />
+    <Compile Include="DAL\IDataGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

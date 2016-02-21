@@ -1,27 +1,28 @@
-﻿@model XinemaProject.ViewModels.CinemasVM
+﻿@model IEnumerable<XinemaProject.Models.Cinema>
 
-@{ 
+
+@{
     ViewBag.Title = "Cinemas";
 }
 
 
-@foreach (var item in Model.cinemasName)
-    {
-        <div class="col_1_of_3 span_1_of_3">
-            <a href="#">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="~/images/janegotagun.jpg" alt="" />
-                    </div>
-                    <div class="price">
-                        <div class="cart-left">
-                            <p class="title">@Html.DisplayFor(modelItem =>item.CinemaName)</p>
-                        </div>
-                        <div class="cart-right"> </div>
-                        <div class="clear"></div>
-                    </div>
+@foreach (var item in Model)
+{
+    <div class="col_1_of_3 span_1_of_3">
+        <a href="#">
+            <div class="inner_content clearfix">
+                <div class="product_image">
+                    <img src="~/images/janegotagun.jpg" alt="" />
                 </div>
-            </a>
-        </div>
+                <div class="price">
+                    <div class="cart-left">
+                        <p class="title">@Html.DisplayFor(modelItem => item.CinemaName)</p>
+                    </div>
+                    <div class="cart-right"> </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </a>
+    </div>
 
-    }
+}
