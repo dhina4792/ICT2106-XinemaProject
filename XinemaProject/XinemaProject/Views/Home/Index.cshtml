@@ -1,40 +1,5 @@
 ﻿@model IEnumerable<XinemaProject.Models.Showtimes>
 
 @{
-    ViewBag.Title = "Showtimes";
+    ViewBag.Title = "Home";
 }
-
-<h2>Showtimes</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.showtimesStartTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.showtimesDate)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.showtimesStartTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.showtimesDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.showtimesID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.showtimesID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.showtimesID })
-            </td>
-        </tr>
-    }
-
-</table>

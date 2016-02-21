@@ -1,58 +1,125 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Xinema</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/style.css" rel="stylesheet" type="text/css"/>
-
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/form.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="~/Scripts/jquery1.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Scripts/megamenu.js"></script>
+    <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+    <!--start slider -->
+    <link rel="stylesheet" href="~/Content/fwslider.css" media="all">
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/css3-mediaqueries.js"></script>
+    <script src="~/Scripts/fwslider.js"></script>
+    <!--end slider -->
+    <script src="~/Scripts/jquery.easydropdown.js"></script>
 </head>
 <body>
-    <!---start-wrap---->
-    <!---start-header---->
-    <div class="header">
+    <div class="header-bottom">
         <div class="wrap">
-            <!---start-logo---->
-            <div class="logo">
-                <a href="#"><img src="~/images/logo.png" title="logo" /></a>
-            </div>
-            <!---End-logo---->
-            <!---start-top-menu-search---->
-            <div class="top-menu">
-                <div class="top-nav">
-                    <ul>
-                        <li><a href="#">Cinemas</a></li>
-                        <li><a href="#">Showtimes</a></li>
-                        <li><a href="#">Movies</a></li>
-                        
+            <div class="header-bottom-left">
+                <div class="logo">
+                    <a href="index.html"><img src="~/images/logo.png" alt="" /></a>
+                </div>
+                <div class="menu">
+                    <ul class="megamenu skyblue">
+                        <li class="active grid"><a href="~/Views/Home/Index.cshtml">Home</a></li>
+                        <li><a class="color6" href="~/Views/Showtimes/Showtimes.cshtml">Showtimes</a></li>
+                        <li><a class="color7" href="#">Cinemas  </a></li>
                     </ul>
                 </div>
-                <div class="search">
-                    <form>
-                        <input type="text" class="textbox" value="Search:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                        <input type="submit" value=" " />
-                    </form>
-                </div>
-                <div class="clear"> </div>
             </div>
-            <div class="clear"> </div>
-            <!---End-top-menu-search---->
+            <div class="header-bottom-right">
+                <div class="search">
+                    <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                    <input type="submit" value="Subscribe" id="submit" name="submit">
+                    <div id="response"> </div>
+                </div>
+                <div class="tag-list">
+                    <ul class="icon1 sub-icon1 profile_img">
+                        <li>
+                            <a class="active-icon c1" href="#"> </a>
+                            <ul class="sub-icon1 list">
+                                <li><h3>sed diam nonummy</h3><a href=""></a></li>
+                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="icon1 sub-icon1 profile_img">
+                        <li>
+                            <a class="active-icon c2" href="#"> </a>
+                            <ul class="sub-icon1 list">
+                                <li><h3>No Products</h3><a href=""></a></li>
+                                <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
+                </div>
+            </div>
+            <div class="clear"></div>
         </div>
-        <!---End-header---->
     </div>
-    <div class="clear"> </div>
+    <!-- start slider -->
+    <div id="fwslider">
+        <div class="slider_container">
+            <div class="slide">
+                <!-- Slide image -->
+                <img src="~/images/banner.jpg" alt="" />
+                <!-- /Slide image -->
+                <!-- Texts container -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <!-- Text title -->
+                        <h4 class="title">Aluminium Club</h4>
+                        <!-- /Text title -->
+                        <!-- Text description -->
+                        <p class="description">Experiance ray ban</p>
+                        <!-- /Text description -->
+                    </div>
+                </div>
+                <!-- /Texts container -->
+            </div>
+            <!-- /Duplicate to create more slides -->
+            <div class="slide">
+                <img src="~/images/banner1.jpg" alt="" />
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h4 class="title">consectetuer adipiscing </h4>
+                        <p class="description">diam nonummy nibh euismod</p>
+                    </div>
+                </div>
+            </div>
+            <!--/slide -->
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+    </div>
+    <!--/slider -->
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="f-list2">
+                <ul>
+                    <li class="active"><a href="about.html">About Us</a></li> |
+                    <li><a href="delivery.html">Terms & Conditions</a></li> |
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
