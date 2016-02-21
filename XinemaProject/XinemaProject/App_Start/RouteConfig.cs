@@ -18,6 +18,8 @@ namespace XinemaProject
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute("cinemas", "cinemas", new { controller = "Cinemas", action = "Index" });
         }
     }
 }
