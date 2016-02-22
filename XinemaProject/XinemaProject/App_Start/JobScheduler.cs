@@ -29,8 +29,8 @@ namespace XinemaProject.App_Start
 
 
             // Code for testing
-            .WithIdentity("trigger1", "group1")
-            .StartNow()
+            //.WithIdentity("trigger1", "group1")
+            //.StartNow()
             .WithSimpleSchedule(x => x
                 .WithIntervalInMinutes(10)
                 .RepeatForever())

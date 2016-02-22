@@ -10,7 +10,7 @@ namespace XinemaProject.DAL
     public class XinemaProjectContext: DbContext
     {
         public XinemaProjectContext()
-            : base("CinemaContextDB")
+            : base("XinemaProjectDB")
         {
         }
         public DbSet<Cinema> Cinemas { get; set; }
