@@ -18,7 +18,8 @@ namespace XinemaProject.Controllers
         public ActionResult Index()
         {
 
-            return View(db.Movies.ToList());
+            //return View(db.Movies.ToList());
+            return View();
         }
 
 

@@ -52,18 +52,20 @@ namespace Infrastructure.Scrapper
         private List<Cinema> scrapOnePageCinema(IWebDriver driver)
         {
             var cinemaList = new List<Cinema>();
+            var cinemas = driver.FindElements(By.CssSelector(".theater"));
 
-            var titles = driver.FindElements(By.CssSelector("a[id^='link_1_theater_']"));
-            foreach (var item in titles)
+            foreach (var cinema in cinemas)
             {
-                var currentCinemaName = item.Text;
-                cinemaList.Add(new Cinema() { CinemaName=currentCinemaName,CinemaAddress="Test address Orchard Road"});
+                var currCinemaName = cinema.FindElement(By.CssSelector("a[id^='link_1_theater_']")).Text;
+                var currCinemaAddress = cinema.FindElement(By.CssSelector(".info")).Text;
+
+                cinemaList.Add(new Cinema() { CinemaName = currCinemaName, CinemaAddress = currCinemaAddress });
             }
-            
+
             return cinemaList;
         }
 
-        public  List<Cinema> getCinemaNames()
+        public List<Cinema> getCinemaNames()
         {
             return allCinemas;
         }
