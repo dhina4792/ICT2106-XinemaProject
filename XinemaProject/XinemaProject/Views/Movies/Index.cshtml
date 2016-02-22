@@ -3,190 +3,23 @@
 @{
     ViewBag.Title = "Movies";
 }
-
-<div class="main">
-    <div class="wrap">
-        <div class="section group">
-            <div class="cont span_2_of_3">
-                <h2 class="head">Now Showing</h2>
-                <div class="top-box">
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/deadpool.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title">Deadpool</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/therevenant.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title">The Revenant</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/janegotagun.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title">Jane got a Gun</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    @*@foreach (var item in Model)
-                    {
-                        <div class="col_1_of_3 span_1_of_3">
-                            <a href="#">
-                                <div class="inner_content clearfix">
-                                    <div class="product_image">
-                                        <img src="~/images/janegotagun.jpg" alt="" />
-                                    </div>
-                                    <div class="price">
-                                        <div class="cart-left">
-                                            <p class="title">@Html.DisplayFor(modelItem => item.moviesName)</p>
-                                        </div>
-                                        <div class="cart-right"> </div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    }*@
-                    <div class="clear"></div>
+@foreach (var item in Model)
+{
+    <div class="col_1_of_3 span_1_of_3">
+        <a href="#">
+            <div class="inner_content clearfix">
+                <div class="product_image">
+                    <img src="~/images/janegotagun.jpg" alt="" />
                 </div>
-
-                <h2 class="head">Coming Soon</h2>
-                <div class="top-box1">
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title"></p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
+                <div class="price">
+                    <div class="cart-left">
+                        <p class="title">@Html.DisplayFor(modelItem => item.moviesName)</p>
                     </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title"></p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title"></p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <h2 class="head">Sneak Previews</h2>
-                <div class="top-box1">
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/race.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title">Race</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/ridealong2.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        <p class="title">Ride Along 2</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col_1_of_3 span_1_of_3">
-                        <a href="#">
-                            <div class="inner_content clearfix">
-                                <div class="product_image">
-                                    <img src="~/images/GodsofEgypt.jpg" alt="" />
-                                </div>
-                                <div class="price">
-                                    <div class="cart-left">
-                                        Gods of Egypt</p>
-                                    </div>
-                                    <div class="cart-right"> </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <div class="cart-right"> </div>
                     <div class="clear"></div>
                 </div>
             </div>
-          <div class="clear"></div>
-        </div>
+        </a>
     </div>
-</div>
+
+}

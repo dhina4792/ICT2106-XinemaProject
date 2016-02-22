@@ -187,9 +187,11 @@
     <Compile Include="Controllers\CinemasController.cs" />
     <Compile Include="App_Start\DataScrapperJob.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\ShowtimesController.cs" />
     <Compile Include="DAL\CinemaGateway.cs" />
     <Compile Include="DAL\ICinemaGateway.cs" />
+    <Compile Include="DAL\MovieGateway.cs" />
     <Compile Include="DAL\XinemaProjectContext.cs" />
     <Compile Include="DAL\DataGateway.cs" />
     <Compile Include="DAL\IDataGateway.cs" />

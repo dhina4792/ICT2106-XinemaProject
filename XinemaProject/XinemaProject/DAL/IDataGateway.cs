@@ -14,5 +14,6 @@ namespace XinemaProject.DAL
         void Update(T obj);
         T Delete(int? id);
         void Save();
+
     }
 }
