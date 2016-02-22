@@ -19,6 +19,7 @@
     <script src="~/Scripts/fwslider.js"></script>
     <!--end slider -->
     <script src="~/Scripts/jquery.easydropdown.js"></script>
+    @Styles.Render("~/Content/css")
 </head>
 <body>
     <div class="header-bottom">
@@ -48,10 +49,11 @@
 
     <!--/slider -->
     <div class="container body-content">
-        @RenderBody()
+        
         <hr />
 
     </div>
+    @RenderBody()
     <div class="footer-bottom">
         <div class="wrap">
             <div class="f-list2">
@@ -65,5 +67,6 @@
         </div>
     </div>
     </div>
+    @Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>
