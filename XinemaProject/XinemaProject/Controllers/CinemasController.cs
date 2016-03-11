@@ -13,17 +13,34 @@ namespace XinemaProject.Controllers
 {
     public class CinemasController : Controller
     {
-        private CinemaGateway cinemaGateway = new CinemaGateway();
+        private CinemaGateway cinemaGateway;
         // Scrapper scrapper = new Scrapper();
         // GET: Cinemas
-        public ActionResult Index()
+
+        public CinemasController()
+        {
+            cinemaGateway = new CinemaGateway();
+            ViewBag.CinemaOrderByDropDownListItems = cinemaGateway.GetCinemaOrderByNames();
+        }
+        public ActionResult Index(int? id)
         {
             //scrapper.scrapCinemaName("https://www.google.com/movies?near=singapore&rl=1&stok=ABAPP2tdNR_5cLRa-6emW2UtecEL44SX2A%3A1456036737594");
             //CinemasVM vm = new CinemasVM();
             //vm.cinemasName = scrapper.getCinemaNames();
             //return View(vm);
-            IEnumerable<Cinema> cinemas = cinemaGateway.SelectAll();
-            return View(cinemas);
+            if (id != null)
+            {
+                foreach (var item in ViewBag.CinemaOrderByDropDownListItems)
+                {
+                    if (item.Value == id.ToString())
+                    {
+                        item.Selected = true;
+
+                    }
+                }
+                return View(cinemaGateway.SortBy((int)id));
+            }
+            return View(cinemaGateway.SelectAll());
         }
 
 

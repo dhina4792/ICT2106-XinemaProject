@@ -5,8 +5,12 @@
     ViewBag.Title = "Cinemas";
 }
 
-
-
+<div class="pull-right">
+    @Html.Label("Order By")
+    @Html.DropDownList("CinemaOrderByDropDownListItems", null, new { onchange = "document.location.href='/Cinemas/Index?id='+this.value;" })
+</div>
+<div class="clear">
+</div>
 
 <div class="container">
     <div class="row">

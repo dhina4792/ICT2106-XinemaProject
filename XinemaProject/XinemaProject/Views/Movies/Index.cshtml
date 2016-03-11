@@ -5,8 +5,14 @@
    
 }
 
-
+<div class="pull-right">
+    @Html.Label("Order By")
+    @Html.DropDownList("MovieOrderByDropDownListItems", null, new { onchange = "document.location.href='/Movies/Index?id='+this.value;" })
+</div>
+<div class="clear"> 
+</div>
 <div class="container">
+
     <div class="row">
         @foreach (var item in Model)
         {
