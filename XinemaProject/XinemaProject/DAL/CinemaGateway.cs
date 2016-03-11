@@ -15,7 +15,7 @@ namespace XinemaProject.DAL
         {
 
             CinemaOrderByDropDownItems = new List<SelectListItem>();
-            var firstItem = new SelectListItem { Text = "All", Value = "0" };
+            var firstItem = new SelectListItem { Text = "All", Value = "0"};
             var secondItem = new SelectListItem { Text = "Shaw", Value = "1" };
             var thirdItem = new SelectListItem { Text = "Golden Village", Value = "2" };
             var fourthItem = new SelectListItem { Text = "Cathay", Value = "3" };

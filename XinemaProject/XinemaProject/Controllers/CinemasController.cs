@@ -36,9 +36,23 @@ namespace XinemaProject.Controllers
                     {
                         item.Selected = true;
 
+
                     }
                 }
                 return View(cinemaGateway.SortBy((int)id));
+            }
+            else
+            {
+                foreach (var item in ViewBag.CinemaOrderByDropDownListItems)
+                {
+                    if (item.Text == "All")
+                    {
+                        item.Selected = true;
+
+
+                    }
+                }
+
             }
             return View(cinemaGateway.SelectAll());
         }
