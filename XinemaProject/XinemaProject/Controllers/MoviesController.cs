@@ -14,14 +14,34 @@ namespace XinemaProject.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        private ApplicationDbContext db = new ApplicationDbContext();
-        public ActionResult Index()
+        private MovieGateway movieGateway;
+        // Scrapper scrapper = new Scrapper();
+        // GET: Cinemas
+
+        public MoviesController()
         {
-
-            //return View(db.Movies.ToList());
-            return View();
+            movieGateway = new MovieGateway();
+            ViewBag.MovieOrderByDropDownItems = movieGateway.GetMovieOrderByNames();
         }
+        public ActionResult Index(int? id)
+        {
+            ////return View(vm);
+            if (id != null)
+            {
+                foreach (var item in ViewBag.MovieOrderByDropDownItems)
+                {
+                    if (item.Value == id.ToString())
+                    {
+                        item.Selected = true;
 
 
+                    }
+                }
+                return View(movieGateway.SortBy((int)id));
+            }
+            return View(movieGateway.SelectAll());
+
+
+        }
     }
 }

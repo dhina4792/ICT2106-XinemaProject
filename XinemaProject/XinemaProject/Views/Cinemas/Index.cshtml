@@ -47,7 +47,7 @@
                 <div class="thumbnail">
 
                     <div class="caption">
-                        <h3>@Html.DisplayFor(modelItem => item.CinemaName)</h3>
+                        @Html.ActionLink(item.CinemaName, "Details", new { id = item.CinemaID }, new { @class = "h3" })
                         <p>@item.CinemaAddress</p>
 
                     </div>
@@ -75,7 +75,7 @@
                 <div class="thumbnail">
 
                     <div class="caption">
-                        <h3>@Html.DisplayFor(modelItem => item.CinemaName)</h3>
+                        @Html.ActionLink(item.CinemaName, "Details", new { id = item.CinemaID }, new { @class = "h3" })
                         <p>@item.CinemaAddress</p>
 
                     </div>
@@ -103,7 +103,7 @@
                 <div class="thumbnail">
 
                     <div class="caption">
-                        <h3>@Html.DisplayFor(modelItem => item.CinemaName)</h3>
+                        @Html.ActionLink(item.CinemaName, "Details", new { id = item.CinemaID }, new { @class = "h3" })
                         <p>@item.CinemaAddress</p>
 
                     </div>

@@ -8,6 +8,7 @@ using XinemaProject.ViewModels;
 using System.Data.Entity;
 using XinemaProject.DAL;
 using XinemaProject.Models;
+using GoogleMaps.LocationServices;
 
 namespace XinemaProject.Controllers
 {
@@ -56,7 +57,18 @@ namespace XinemaProject.Controllers
             }
             return View(cinemaGateway.SelectAll());
         }
-
+        public ActionResult Details(int? id)
+        {
+            Cinema model = cinemaGateway.SelectById(id);
+            var address = model.CinemaAddress;
+            int indexOfHyphen = address.IndexOf('-');
+            String addressWithoutPhone = address.Substring(0, indexOfHyphen - 1);
+            var locationService = new GoogleLocationService();
+            var point = locationService.GetLatLongFromAddress(addressWithoutPhone);
+            ViewBag.latCinema = point.Latitude;
+            ViewBag.longCinema = point.Longitude;
+            return View(model);
+        }
 
     }
 }
